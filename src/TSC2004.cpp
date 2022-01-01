@@ -141,7 +141,7 @@ void TSC2004::readData(int16_t *x, int16_t *y, int16_t *z)
 
 bool TSC2004::touched()
 {
-    return readRegister16(_REG_CFR0) & (CFR0_PENMODE | CFR0_STATUS);
+    return readRegister16(_REG_CFR0) & CFR0_PENMODE;
 }
 
 bool TSC2004::bufferEmpty()
